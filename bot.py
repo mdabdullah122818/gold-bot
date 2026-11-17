@@ -5,8 +5,8 @@ import pandas as pd
 import numpy as np
 
 # GitHub Secrets থেকে টোকেন ও চ্যাট আইডি রিড করবে (নিরাপদ পদ্ধতি)
-TELEGRAM_BOT_TOKEN = "9274548983:AAGNV1jS0SEPZBM41vuFm-yIYRmF0cVeKPw"
-TELEGRAM_CHAT_ID = "7115326324"
+TELEGRAM_BOT_TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
+TELEGRAM_CHAT_ID = os.environ.get('TELEGRAM_CHAT_ID')
 
 def send_telegram_message(message):
     url = f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/sendMessage"
